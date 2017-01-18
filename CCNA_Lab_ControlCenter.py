@@ -26,10 +26,10 @@ gpio.setcfg(led, gpio.OUTPUT)
 try:
     print ("Press CTRL+C to exit")
     while True:
-        in = raw_input("1: start Programm    2: reboot   3: shutdown")
-        if(in == 1):
+        affenkind = raw_input("1: start Programm    2: reboot   3: shutdown")
+        if(affenkind == 1):
             gpio.output(pin, 1)
-        if(in == 2):
+        if(affenkind == 2):
             if(gpio.input(pin)):
                 gpio.output(pin, 0)
                 for i in range 5:
@@ -37,7 +37,7 @@ try:
                     sleep(2)
                 gpio.output(pin, 1)
                 print"done!"
-        if(in == 3):
+        if(affenkind == 3):
             gpio.output(pin, 0)
 
 except KeyboardInterrupt:
