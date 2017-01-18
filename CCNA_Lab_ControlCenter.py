@@ -24,7 +24,9 @@ r1 = port.PA19
 
 
 gpio.init()
-gpio.setcfg(pin, gpio.OUTPUT)
+gpio.setcfg(sw1, gpio.OUTPUT)
+gpio.setcfg(sw2, gpio.OUTPUT)
+gpio.setcfg(r1, gpio.OUTPUT)
 
 try:
     print ("Press CTRL+C to exit")
