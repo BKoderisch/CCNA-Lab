@@ -26,7 +26,7 @@ gpio.setcfg(pin, gpio.OUTPUT)
 try:
     print ("Press CTRL+C to exit")
     while True:
-        affenkind = raw_input("1: start Programm    2: reboot   3: shutdown")
+        affenkind = input("1: start Programm    2: reboot   3: shutdown\n") 
         if(affenkind == 1):
             gpio.output(pin, 1)
         if(affenkind == 2):
