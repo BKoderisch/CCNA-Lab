@@ -26,7 +26,7 @@ gpio.setcfg(led, gpio.OUTPUT)
 try:
     print ("Press CTRL+C to exit")
     while True:
-        in = input("1: start Programm    2: reboot   3: shutdown")
+        in = raw_input("1: start Programm    2: reboot   3: shutdown")
         if(in == 1):
             gpio.output(pin, 1)
         if(in == 2):
