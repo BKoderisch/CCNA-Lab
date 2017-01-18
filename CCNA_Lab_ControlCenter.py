@@ -32,7 +32,7 @@ try:
         if(affenkind == 2):
             if(gpio.input(pin)):
                 gpio.output(pin, 0)
-                for i in range 5:
+                for i in range (5):
                     print"wait..."
                     sleep(2)
                 gpio.output(pin, 1)
