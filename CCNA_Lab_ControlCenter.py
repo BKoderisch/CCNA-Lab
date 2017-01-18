@@ -21,7 +21,7 @@ __email__ = "b.koderisch@gmail.com"
 pin = port.PA12
 
 gpio.init()
-gpio.setcfg(led, gpio.OUTPUT)
+gpio.setcfg(pin, gpio.OUTPUT)
 
 try:
     print ("Press CTRL+C to exit")
