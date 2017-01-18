@@ -18,7 +18,10 @@ __maintainer__ = __author__
 __email__ = "b.koderisch@gmail.com"
 
 
-pin = port.PA12
+sw1 = port.PA12
+sw2 = port.PA11
+r1 = port.PA19
+
 
 gpio.init()
 gpio.setcfg(pin, gpio.OUTPUT)
@@ -26,7 +29,8 @@ gpio.setcfg(pin, gpio.OUTPUT)
 try:
     print ("Press CTRL+C to exit")
     while True:
-        affenkind = input("1: start Programm    2: reboot   3: shutdown\n") 
+        pin = input("sw1    sw2     r1")
+        affenkind = input("1: start Programm    2: reboot   3: shutdown\n")
         if(affenkind == 1):
             gpio.output(pin, 1)
         if(affenkind == 2):
