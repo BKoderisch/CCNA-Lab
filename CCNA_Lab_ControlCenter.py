@@ -20,7 +20,7 @@ __email__ = "b.koderisch@gmail.com"
 
 sw1 = port.PA12
 sw2 = port.PA11
-r1 = port.PA19
+r1 = port.PA06
 
 
 gpio.init()
