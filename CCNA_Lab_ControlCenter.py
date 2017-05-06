@@ -20,7 +20,7 @@ __email__ = "b.koderisch@gmail.com"
 
 sw1 = port.PA12
 sw2 = port.PA11
-r1 = port.PA06
+r1 = port.PA6
 
 
 gpio.init()
@@ -31,7 +31,7 @@ gpio.setcfg(r1, gpio.OUTPUT)
 try:
     print ("Press CTRL+C to exit")
     while True:
-        pin = input("sw1    sw2     r1")
+        pin = input("sw1    sw2     r1 \n")
         affenkind = input("1: start Programm    2: reboot   3: shutdown\n")
         if(affenkind == 1):
             gpio.output(pin, 1)
@@ -47,5 +47,7 @@ try:
             gpio.output(pin, 0)
 
 except KeyboardInterrupt:
-    gpio.output(pin, 0)
+    gpio.output(PA12, 0) 
+    gpio.output(PA11, 0)
+    gpio.output(PA6, 0)
     print ("Goodbye!")
