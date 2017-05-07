@@ -29,6 +29,10 @@ gpio.setcfg(sw2, gpio.OUTPUT)
 gpio.setcfg(r1, gpio.OUTPUT)
 
 try:
+    gpio.output(port.PA12, 1) 
+    gpio.output(port.PA11, 1)
+    gpio.output(port.PA6, 1)
+    
     print ("Press CTRL+C to exit")
     while True:
         pin = input("sw1    sw2     r1 \n")
