@@ -34,20 +34,20 @@ try:
         pin = input("sw1    sw2     r1 \n")
         affenkind = input("1: start Programm    2: reboot   3: shutdown\n")
         if(affenkind == 1):
-            gpio.output(pin, 1)
+            gpio.output(pin, 0)
         if(affenkind == 2):
             if(gpio.input(pin)):
-                gpio.output(pin, 0)
+                gpio.output(pin, 1)
                 for i in range (5):
                     print"wait..."
                     sleep(2)
-                gpio.output(pin, 1)
+                gpio.output(pin, 0)
                 print"done!"
         if(affenkind == 3):
-            gpio.output(pin, 0)
+            gpio.output(pin, 1)
 
 except KeyboardInterrupt:
-    gpio.output(PA12, 0) 
-    gpio.output(PA11, 0)
-    gpio.output(PA6, 0)
+    gpio.output(port.PA12, 1) 
+    gpio.output(port.PA11, 1)
+    gpio.output(port.PA6, 1)
     print ("Goodbye!")
